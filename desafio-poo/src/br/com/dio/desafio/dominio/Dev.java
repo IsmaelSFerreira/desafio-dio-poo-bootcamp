@@ -12,6 +12,7 @@ public class Dev {
     }
 
     public void progredir() {
+
         Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
         if(conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
@@ -28,10 +29,15 @@ public class Dev {
         }
         return soma;
 
-        /*return this.conteudosConcluidos
-                .stream()
-                .mapToDouble(Conteudo::calcularXp)
-                .sum();*/
+        // return this.conteudosConcluidos
+        //         .stream()
+        //         .mapToDouble(Conteudo::calcularXp)
+        //         .sum();
+    }
+
+    public int quantidadeInscricoes(){
+
+        return conteudosInscritos.size();
     }
 
 
@@ -57,6 +63,12 @@ public class Dev {
 
     public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
         this.conteudosConcluidos = conteudosConcluidos;
+    }
+
+    public void conteudosDisponiveis(Set<Conteudo> conteudosDisponiveis){
+        for(Conteudo conteudo : conteudosDisponiveis ){
+            System.out.println(conteudo);
+        }
     }
 
     @Override

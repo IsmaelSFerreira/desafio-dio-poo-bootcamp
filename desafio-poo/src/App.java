@@ -41,6 +41,7 @@ public class App {
         dev1.setNome("Dev 1");
         dev1.inscreverBootcamp(bootcamp);
         System.out.println("Conteudos Inscritos dev1"+ dev1.getConteudosInscritos());
+        System.out.println("Quantidade de inscrições do dev1: " + dev1.quantidadeInscricoes());
         dev1.progredir();
         System.out.println("------------------------------------");
         System.out.println("Conteúdos Concluídos Dev1:" + dev1.getConteudosConcluidos());
@@ -52,11 +53,16 @@ public class App {
         dev2.inscreverBootcamp(bootcamp);
         System.out.println("Conteudos Inscritos dev2"+ dev2.getConteudosInscritos());
         dev2.progredir();
+        System.out.println("Quantidade de inscrições do dev2: " + dev2.quantidadeInscricoes());
         dev2.progredir();
         dev2.progredir();
         System.out.println("------------------------------------");
         System.out.println("Conteúdos Concluídos Dev2:" + dev2.getConteudosConcluidos());
         System.out.println("XP:" + dev2.calcularTotalXp());
+
+        System.out.println("\nConteudo disponível:");
+        dev1.conteudosDisponiveis(bootcamp.getConteudos());
+        
 
 
 
